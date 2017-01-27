@@ -1,0 +1,17 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+	<ribbon>
+		<tabs>
+			<tab id="customTab" label="Report Tools" insertAfterMso="Developer">
+				<group id="customGroup" label="Report Tools">
+					<button id="rptClear" label="Clear Report" size="normal" onAction="ClearTemplate" imageMso="TableEraser" />
+                    <button id="service1" tag="service1" label="Get Service Line 1 Invoices" size="normal" onAction="modRibbonControl.ButtonOnAction" imageMso="ReplicationOptionsMenu" />
+					<button id="service2" tag="service2" label="Get Service Line 2 Invoices" size="normal" onAction="modRibbonControl.ButtonOnAction" imageMso="ReplicationOptionsMenu" />
+					<button id="service3" tag="service3" label="Get Service Line 3 Invoices" size="normal" onAction="modRibbonControl.ButtonOnAction" imageMso="ReplicationOptionsMenu" />
+					<button id="service4" tag="service4" label="Get Service Line 4 Invoices" size="normal" onAction="modRibbonControl.ButtonOnAction" imageMso="ReplicationOptionsMenu" />
+					<button id="getPostage" label="Get Postage" size="normal" onAction="GetPostage" imageMso="TabOrder" />
+					<button id="addSubTtl" label="Add Sub Totals" size="normal" onAction="addSubTotal" imageMso="QueryBuilder"  />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
