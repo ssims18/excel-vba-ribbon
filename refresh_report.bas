@@ -334,7 +334,7 @@ Sub GetPostage(control As IRibbonControl)
         End With
         
         ' write to template (Advantage Postage)
-        If FncCode1 = "postag" Then
+        If FncCode1 = "postag" Or FncCode1 = "zpost" Then
             With pstg_template
                 'Invoice
                 pstg_template.Cells(LastRow1 + 1, 1) = ARInv
@@ -441,7 +441,8 @@ Sub ClearTemplate(control As IRibbonControl)
             intLastRow = .Range("A1").SpecialCells(xlCellTypeLastCell).row
         End With
         
-        If isMainReportSheet(ws.Name) Then
+        'If isMainReportSheet(ws.Name) Then
+        If ws.Name = "Advantage AR" Or ws.Name = "Advantage Postage" Or ws.Name = "AO-AM" Then
             'Delete the range from the 2nd row
             Rows("2:" + CStr(intLastRow) + "").Delete
             
