@@ -44,17 +44,17 @@ End Function
 Public Function getPrincipalLookup(BusinessLine, LastRow1) As String
 
     If BusinessLine = "service2" Then
-        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 2 Name"", ""Service Line 2 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
+        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 2 Name"", ""Service Line 2 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
         
     ElseIf BusinessLine = "service3" Then
-        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 3 Name"", ""Service Line 3 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
+        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 3 Name"", ""Service Line 3 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
         
     ElseIf BusinessLine = "service4" Then
-        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 4 Name"", ""Service Line 4 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
+        getPrincipalLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 4 Name"", ""Service Line 4 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0))"
     
     ' default to service1 lookup
     Else
-        getPrincipalLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
+        getPrincipalLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
     
     End If
 
@@ -74,7 +74,7 @@ Public Function getAOLookup(BusinessLine, LastRow1) As String
         getAOLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 4 Name"", ""Service Line 4 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, 6, FALSE),0))"
     ' default to service1 lookup
     Else
-        getAOLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
+        getAOLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(L$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
     End If
 
 End Function
@@ -92,7 +92,7 @@ Public Function getAMLookup(BusinessLine, LastRow1) As String
         getAMLookup = "=IF(J" & LastRow1 + 1 & " = ""Service Line 4 Name"", ""Service Line 4 Name"", IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, 7, FALSE),0))"
     ' default to service1 lookup
     Else
-        getAMLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:E, MATCH(K$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
+        getAMLookup = "=IFERROR(VLOOKUP(A" & LastRow1 + 1 & ",'AO-AM'!A:G, MATCH(M$1,'AO-AM'!$A$1:$G$1,0), FALSE),0)"
     End If
 
 End Function
